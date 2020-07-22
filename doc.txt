@@ -1,4 +1,4 @@
-INTERSECTION TYPES
+/************ INTERSECTION TYPES
 they allow us to combine 2 different types
 ex: 
 type t1 = {
@@ -16,10 +16,10 @@ tmp = {
 this is especially useful  with obj types but can be with others as well
 ex: type Combine = string | number
 type Numberic = number | boolean
-
 type Universal = Combine & Numberic
 
-TYPE GUARDS
+
+/************ TYPE GUARDS
 tyoe guards lets us utilize the flexibility union types give us.
 ex: let add = (a: Combine, b: Combine) => {
     if (typeof a === 'string' || typeof b === 'string'){
@@ -84,3 +84,35 @@ let useVehicle = (vehicle: Vehicle) => {
 
 useVehicle(v1)
 useVehicle(v2)
+
+/************ DISCRIMINATED UNIONS
+in discriminated unions there is one common property in every object 
+property that makes up union. that property usually describes that object
+
+
+/************ TYPE CASTING
+type casting helps you tell typescript that some value is a specific type
+that typescript is unable to detect on its own. good example is DOM
+ex: const paragraph = document.querySelector('p')
+const inputEl = document.getElementById('user-input')
+inputEl.value = 'hi there' => here ts thinks value could be null so
+it shows compile error. 2 ways to solve:
+1. const inputEl = <HTMLInputElement>document.getElementById('user-input')
+2. const inputEl = document.getElementById('user-input') as HTMLInputElement
+
+/************ INDEX PROPERTIES
+
+
+/************ FUNCTION OVERLOADS
+it is a feature that helps us define multiple function signatures which means we
+can have multiple possible ways of calling a function with different parameters
+but it looks too much code...
+
+/************ OPTIONAL CHAINING
+clg(fetchUserData?.user?.name)
+it's like an if check. gotta test it out latah.
+
+/************ NULLISH COALESCING
+no idea data is null, undefined or other type?
+gotta test it out latah this one as well
+
