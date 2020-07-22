@@ -1,0 +1,20 @@
+INTERSECTION TYPES
+they allow us to combine 2 different types
+ex: 
+type t1 = {
+    name: string
+}
+type t2 = {
+    age: number
+}
+type mixTs = t1 & t2 
+const tmp: mixTs // here we are declaring a variable in ts way
+tmp = {
+    name: 'justin'  // now here when we are assigned a value to tmp
+    age: 25         // we should follow the t1 and t2 types
+}
+this is especially useful  with obj types but can be with others as well
+ex: type Combine = string
+type Numberic = number | boolean
+
+type Universal = Combine & Numberic

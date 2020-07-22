@@ -1,0 +1,15 @@
+{
+  "name": "advanced-types",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/outranker/ts-advanced-types.git",
+  "author": "Justin <justin@rsad.co.kr>",
+  "license": "MIT",
+  "scripts": {
+    "dev":"nodemon dist/app.js",
+    "watch":"tsc -w"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
